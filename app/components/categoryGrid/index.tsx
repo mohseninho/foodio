@@ -1,14 +1,27 @@
+"use client";
 import CategoryItem from "../categoryItem";
 import SectionTitle from "../sectionTitle";
 
 import categoryPic1 from "../../images/irani.jpg";
 import categoryPic2 from "../../images/salad.jpg";
+import { useBreakpoints, useMediaQuery } from "@/app/constants/hooks";
 
 export default function CategoryGrid() {
+    const { isXxs, isXs, isSm, isMd, isLg } = useBreakpoints();
+
+    function setSize():  string | undefined {
+        if (isXxs) return "grid-cols-2";
+        if (isXs) return "grid-cols-2";
+        if (isSm) return "grid-cols-2";
+        if (isMd) return "grid-cols-4";
+        if (isLg) return "grid-cols-6";
+        else return "";
+    }
+
     return (
         <div className="w-full my-10">
             <SectionTitle title="دسته بندی ها" />
-            <div className="w-full h-[250px] grid grid-cols-6 grid-rows-2 gap-8">
+            <div className={`w-full grid ${setSize()} sm:gap-8 gap-4`}>
                 <CategoryItem title="ایرانی" image={categoryPic1} />
                 <CategoryItem title="فست‌فود" image={categoryPic1} />
                 <CategoryItem title="کباب" image={categoryPic2} />
