@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../images/logo.png";
 import { Button } from "@/components/ui/button";
-import { Store } from "lucide-react";
+import { Store, User } from "lucide-react";
 
 export default function Header() {
     return (
@@ -9,10 +9,16 @@ export default function Header() {
             <div className="w-[120px] h-[120px] relative">
                 <Image src={logo} fill alt="" />
             </div>
-            <div className="flex justify-center items-center gap-4">
-                <Button variant="ghost" className="flex justify-center items-center gap-2">
+            <div className="md:hidden">
+                <User />
+            </div>
+            <div className="hidden md:flex justify-center items-center gap-4">
+                <Button
+                    variant="ghost"
+                    className="flex justify-center items-center gap-2"
+                >
                     <Store />
-                     <span>ثبت نام فروشندگان</span>
+                    <span>ثبت نام فروشندگان</span>
                 </Button>
                 <Button
                     variant="default"
