@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="fa" dir="rtl">
-            <body className="my-10 mx-24">
+            <body className="my-10 mx-32 relative">
                 <Header />
                 {children}
             </body>
