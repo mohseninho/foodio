@@ -18,7 +18,9 @@ export default function BreadCrumb() {
         <Breadcrumb>
             <BreadcrumbList>
                 <BreadcrumbItem>
-                    <BreadcrumbLink href="/">فودیو</BreadcrumbLink>
+                    <BreadcrumbLink href="/" className="text-gray-400">
+                        فودیو
+                    </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator>
                     <ChevronLeft />
@@ -39,7 +41,10 @@ export default function BreadCrumb() {
                                             )?.link
                                         } `}
                                     className={`transition-colors ${
-                                        idx + 1 === paths.length
+                                        idx + 1 ===
+                                        pathNames.filter(
+                                            (item) => item !== "service"
+                                        ).length
                                             ? "text-gray-600"
                                             : "text-gray-400"
                                     } hover:text-black`}
