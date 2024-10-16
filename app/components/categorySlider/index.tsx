@@ -40,7 +40,7 @@ export default function CategorySlider() {
                 align: "start",
                 direction: "rtl",
             }}
-            className="w-full my-10"
+            className="w-full my-8"
         >
             <CarouselContent className="h-[120px]">
                 <CarouselItem className={setSize()}>

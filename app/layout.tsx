@@ -1,6 +1,7 @@
 import "./globals.css";
 import "@/app/fonts/style.css";
 import Header from "./components/header";
+import { usePathname } from "next/navigation";
 
 export const metadata = {
     title: "Next.js",
@@ -14,8 +15,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="fa" dir="rtl">
-            <body className="my-10 lg:mx-32 sm:mx-10 mx-4 relative">
-                <Header />
+            <body>
                 {children}
             </body>
         </html>
