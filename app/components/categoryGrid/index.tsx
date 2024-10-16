@@ -4,12 +4,12 @@ import SectionTitle from "../sectionTitle";
 
 import categoryPic1 from "../../images/irani.jpg";
 import categoryPic2 from "../../images/salad.jpg";
-import { useBreakpoints, useMediaQuery } from "@/app/constants/hooks";
+import { useBreakpoints } from "@/app/constants/hooks";
 
 export default function CategoryGrid() {
     const { isXxs, isXs, isSm, isMd, isLg } = useBreakpoints();
 
-    function setSize():  string | undefined {
+    function setSize(): string | undefined {
         if (isXxs) return "grid-cols-2";
         if (isXs) return "grid-cols-2";
         if (isSm) return "grid-cols-2";
