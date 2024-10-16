@@ -21,6 +21,7 @@ import nut from "@/app/images/CategorySliderPics/nuts-desktop.png";
 import protein from "@/app/images/CategorySliderPics/protein-desktop.png";
 import other from "@/app/images/CategorySliderPics/other-desktop.png";
 import { useBreakpoints, useMediaQuery } from "@/app/constants/hooks";
+import Link from "next/link";
 
 export default function CategorySlider() {
     const { isXxs, isXs, isSm, isMd, isLg } = useBreakpoints();
@@ -43,16 +44,16 @@ export default function CategorySlider() {
         >
             <CarouselContent className="h-[120px]">
                 <CarouselItem className={setSize()}>
-                    <div className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2">
+                    <Link href="service/resturant" className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2">
                         <Image src={res} width={100} height={100} alt="" />
                         <p>رستوران</p>
-                    </div>
+                    </Link>
                 </CarouselItem>
                 <CarouselItem className={setSize()}>
-                    <div className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2">
+                    <Link href="service/coffe" className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2">
                         <Image src={attari} width={100} height={100} alt="" />
-                        <p>رستوران</p>
-                    </div>
+                        <p>کافه</p>
+                    </Link>
                 </CarouselItem>
                 <CarouselItem className={setSize()}>
                     <div className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2">
