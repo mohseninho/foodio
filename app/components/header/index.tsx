@@ -6,7 +6,7 @@ import BreadCrumb from "../breadCrumb";
 import SearchBar from "../searchBar";
 
 interface props {
-    homeLayout: boolean;
+    homeLayout?: boolean;
 }
 
 export default function Header({ homeLayout }: props) {

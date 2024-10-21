@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Search } from "lucide-react";
 export default function MainHero() {
     return (
-        <div className="w-full md:h-[680px] h-[400px] pt-28 rounded-br-[70px] bg-[#F9FAFB] grid grid-cols-2">
+        <div className="w-full md:h-[680px] h-[400px] pt-28 rounded-br-[70px] bg-gray-100 grid grid-cols-2">
             <div className="flex justify-center items-start flex-col gap-5 md:pr-10">
                 <div className="flex justify-center items-start flex-col gap-1">
                     <h1 className="text-5xl font-bold">

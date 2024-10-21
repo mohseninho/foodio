@@ -9,7 +9,7 @@ export default function MainLayout({
 }>) {
     return (
         <body>
-            <Header homeLayout={false} />
+            <Header />
             {children}
         </body>
     );
