@@ -12,7 +12,7 @@ export default function SideBarItem({ name, pic, isMenu }: props) {
     return (
         <Button
             variant={"ghost"}
-            className="w-full h-10 p-0 m-0 bg-white flex justify-between items-center group"
+            className="w-full h-10 p-0 m-0 bg-transparent flex justify-between items-center group"
         >
             <div className="flex justify-start items-center gap-2">
                 <Image

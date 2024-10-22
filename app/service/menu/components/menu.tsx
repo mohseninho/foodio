@@ -6,7 +6,7 @@ interface props {
 
 export default function Menu({ menuName }: props) {
     return (
-        <div className="col-start-2 col-span-2 rounded-lg bg-white border border-gray-200 flex justify-start items-center flex-col">
+        <div className="w-full rounded-lg bg-white border border-gray-200 flex justify-start items-center flex-col">
             <span className="my-4 flex justify-center items-center">
                 {menuName}
             </span>
