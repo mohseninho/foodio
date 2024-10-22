@@ -4,19 +4,24 @@ import { Button } from "@/components/ui/button";
 
 export default function MenuItem() {
     return (
-        <div className="bg-gray-100 rounded-lg col-span-1 w-full p-4 flex justify-center items-center gap-5 flex-col">
-            <div className="w-full flex justify-between items-center">
-                <div className="flex justify-center items-start flex-col gap-2">
-                    <span>جو دوسر فوری آماده</span>
-                    <span className="text-sm text-gray-400">
-                        ۴۵۰ گرم جو دوسر فوری آماده
-                    </span>
+        <div className="bg-gray-50 rounded-lg col-span-1 w-full p-4 flex justify-center items-center gap-5 flex-col">
+            <div className="w-full grid grid-cols-5 gap-4">
+                <div className="col-span-3 w-full h-full flex justify-start items-start flex-col gap-2">
+                    <div className="overflow-ellipsis line-clamp-1">
+                        جو دوسر فوری آماده
+                    </div>
+                    <div className="overflow-ellipsis line-clamp-3 w-full text-sm text-gray-400">
+                        ۴۵۰ گرم جو دوسر فوری
+                        آماده
+                    </div>
                 </div>
-                <Image
-                    src={pic}
-                    alt=""
-                    className="w-[100px] h-[100px] rounded-lg object-cover aspect-square"
-                />
+                <div className="w-[100px] h-[100px] col-span-2">
+                    <Image
+                        src={pic}
+                        alt=""
+                        className="w-full h-full rounded-lg object-cover aspect-square"
+                    />
+                </div>
             </div>
             <div className="w-full flex justify-between items-center">
                 <span className="text-gray-500 text-sm">
