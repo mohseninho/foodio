@@ -1,7 +1,6 @@
 import Image from "next/image";
 import pic from "@/app/images/TempPics/fitfriends.jpg";
 import { CircleAlert, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import ProviderInformation from "@/app/components/providerInformation";
 
@@ -37,7 +36,7 @@ export default function SideBarMenu() {
                         اطلاعات و نظرات
                     </div>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className="overflow-y-scroll">
                     <ProviderInformation />
                 </DialogContent>
             </Dialog>
