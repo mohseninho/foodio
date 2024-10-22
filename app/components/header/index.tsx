@@ -13,7 +13,7 @@ export default function Header({ homeLayout }: props) {
     return (
         <>
             {homeLayout ? (
-                <header className="absolute flex flex-col w-full z-10 px-10 bg-transparent">
+                <header className="sticky top-0 bg-white flex flex-col w-full z-10 px-10">
                     <div className="w-full h-fit flex justify-between items-center">
                         <div className="w-[120px] h-[120px] relative">
                             <Image src={logo} fill alt="" />
@@ -40,7 +40,7 @@ export default function Header({ homeLayout }: props) {
                     <BreadCrumb />
                 </header>
             ) : (
-                <header className="w-full h-[80px] shadow-md px-5 flex justify-between items-center">
+                <header className="sticky top-0 w-full h-[80px] bg-white z-10 shadow-md px-5 flex justify-between items-center">
                     <Image src={logo} width={80} height={80} alt="" />
                     <SearchBar placeHolder="جست‌وجو در فودیو" />
                     <div className="md:hidden">
