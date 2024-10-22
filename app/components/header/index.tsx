@@ -13,7 +13,7 @@ export default function Header({ homeLayout }: props) {
     return (
         <>
             {homeLayout ? (
-                <header className="sticky top-0 bg-white flex flex-col w-full z-10 px-10">
+                <header className="absolute top-0 bg-transparent flex flex-col w-full z-10 px-10">
                     <div className="w-full h-fit flex justify-between items-center">
                         <div className="w-[120px] h-[120px] relative">
                             <Image src={logo} fill alt="" />
