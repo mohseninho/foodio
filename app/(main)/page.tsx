@@ -5,7 +5,7 @@ export default function page() {
     return (
         <main>
             <MainHero />
-            <CategorySlider />
+            <CategorySlider showButtons />
             <CategoryGrid />
         </main>
     );

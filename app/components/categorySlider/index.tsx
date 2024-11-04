@@ -23,10 +23,14 @@ import other from "@/app/images/CategorySliderPics/other-desktop.png";
 import { useBreakpoints, useMediaQuery } from "@/app/constants/hooks";
 import Link from "next/link";
 
-export default function CategorySlider() {
+interface props {
+    showButtons?: boolean;
+}
+
+export default function CategorySlider({ showButtons }: props) {
     const { isXxs, isXs, isSm, isMd, isLg } = useBreakpoints();
     let isPageWide = useMediaQuery("(min-width: 1050px)");
-    function setSize():  string | undefined {
+    function setSize(): string | undefined {
         if (isXxs) return "basis-1/3";
         if (isXs) return "basis-1/3";
         if (isSm) return "basis-1/3";
@@ -44,13 +48,19 @@ export default function CategorySlider() {
         >
             <CarouselContent className="h-[120px]">
                 <CarouselItem className={setSize()}>
-                    <Link href="service/resturant" className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2">
+                    <Link
+                        href="/service/resturant"
+                        className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2"
+                    >
                         <Image src={res} width={100} height={100} alt="" />
                         <p>رستوران</p>
                     </Link>
                 </CarouselItem>
                 <CarouselItem className={setSize()}>
-                    <Link href="service/coffe" className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2">
+                    <Link
+                        href="/service/coffe"
+                        className="w-full h-full bg-gray-100 border border-gray-200 rounded-2xl flex justify-center items-center flex-col px-2 pb-2"
+                    >
                         <Image src={attari} width={100} height={100} alt="" />
                         <p>کافه</p>
                     </Link>
@@ -122,7 +132,7 @@ export default function CategorySlider() {
                     </div>
                 </CarouselItem>
             </CarouselContent>
-            {isPageWide ? (
+            {isPageWide && showButtons ? (
                 <>
                     <CarouselNext />
                     <CarouselPrevious />
